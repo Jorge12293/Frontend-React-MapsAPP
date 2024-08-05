@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { MapsApp } from './MapsApp';
 import mapboxgl from 'mapbox-gl'; 
 
-mapboxgl.accessToken = 'sjkdfbsdnjkfbsdk';
+mapboxgl.accessToken = process.env.REACT_APP_KEY_MAP_BOX;
 
 if(!navigator.geolocation){
   alert('Tu navegador no tiene opción de Golocation');
@@ -19,4 +19,5 @@ root.render(
     <MapsApp />
   </React.StrictMode>
 );
+
 
